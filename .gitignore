@@ -1,3 +1,6 @@
 .idea
-cmake-build-debug
+/cmake-build-debug
 .pio
+.pio/
+.vscode
+**/cmake-build-debug

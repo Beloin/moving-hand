@@ -1,14 +1,20 @@
+
 #include <Arduino.h>
 
+#define LED 2 // Onboard led
+
 void setup() {
-    // Setup SERVO PWM : https://portal.vidadesilicio.com.br/controle-de-potencia-via-pwm-esp32/
-    Serial.begin(115200);
-    Serial.println("Hello, ESP32!");
-    pinMode(15, OUTPUT);
-    ledcSetup(0, 50, 16);
-    ledcAttachPin(15, 0);
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  pinMode(LED, OUTPUT);
 }
 
 void loop() {
-// write your code here
+  // put your main code here, to run repeatedly:
+  digitalWrite(LED, HIGH);
+  Serial.println("LED is on");
+  delay(1000);
+  digitalWrite(LED, LOW);
+  Serial.println("LED is off");
+  delay(1000);
 }
